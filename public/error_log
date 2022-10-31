@@ -1,0 +1,1 @@
+[20-Sep-2022 13:40:24 Asia/Jakarta] PHP Fatal error:  Composer detected issues in your platform: Your Composer dependencies require a PHP version ">= 8.0.2". You are running 7.3.33. in /home/sydemyco/syntop.sydemy.com/vendor/composer/platform_check.php on line 24
