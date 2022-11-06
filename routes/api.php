@@ -21,6 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // end point yang akan didistribusikan ke front end
 
 // PRODUCT
+// TODO - product detail not finish
 Route::get('/product-rekomendasi', [App\Http\Controllers\Api\ApiProductController::class, 'getRekomendasi']);
 Route::get('/product-list', [App\Http\Controllers\Api\ApiProductController::class, 'getAllProduct']);
 Route::get('/product-new', [App\Http\Controllers\Api\ApiProductController::class, 'getNewProduct']);
@@ -28,6 +29,7 @@ Route::get('/product-search',[App\Http\Controllers\Api\ApiProductController::cla
 Route::get('/product-detail/{id}', [App\Http\Controllers\Api\ApiProductController::class,'detailProduct']);
 
 // MERK
+//TODO - DONE!
 Route::get('/merk-list', [App\Http\Controllers\Api\ApiProductController::class, 'getMerk']);
 Route::get('/product-by-merk', [App\Http\Controllers\Api\ApiProductController::class, 'getProductByMerkId']);
 
