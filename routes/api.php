@@ -47,6 +47,7 @@ Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutContro
 Route::get('/checkout-detail', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutDetail']);
 
 // AUTHENTICATION
+//TODO - DONE!
 Route::post('/register', [App\Http\Controllers\Api\ApiUserController::class, 'register']);
 Route::post('/login', [App\Http\Controllers\Api\ApiUserController::class, 'login']);
 Route::get('/logout', [App\Http\Controllers\Api\ApiUserController::class, 'logout']);
