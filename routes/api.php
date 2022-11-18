@@ -21,7 +21,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 // end point yang akan didistribusikan ke front end
 
 // PRODUCT
-// TODO - product detail not finish
+// DONE!
 Route::get('/product-rekomendasi', [App\Http\Controllers\Api\ApiProductController::class, 'getRekomendasi']);
 Route::get('/product-list', [App\Http\Controllers\Api\ApiProductController::class, 'getAllProduct']);
 Route::get('/product-new', [App\Http\Controllers\Api\ApiProductController::class, 'getNewProduct']);
@@ -29,25 +29,27 @@ Route::get('/product-search',[App\Http\Controllers\Api\ApiProductController::cla
 Route::get('/product-detail/{id}', [App\Http\Controllers\Api\ApiProductController::class,'detailProduct']);
 
 // MERK
-//TODO - DONE!
+// DONE!
 Route::get('/merk-list', [App\Http\Controllers\Api\ApiProductController::class, 'getMerk']);
 Route::get('/product-by-merk', [App\Http\Controllers\Api\ApiProductController::class, 'getProductByMerkId']);
 
 // KERANJANG
+// TODO - Keranjang Post(Inputan Order Now), Keranjang List(Get hasil dari inputan order now),  
 Route::post('/keranjang-post', [App\Http\Controllers\Api\ApiKeranjangController::class, 'postKeranjang']);
 Route::get('/keranjang-list', [App\Http\Controllers\Api\ApiKeranjangController::class, 'getAllKeranjang']);
 Route::post('/keranjang-delete', [App\Http\Controllers\Api\ApiKeranjangController::class, 'deleteKeranjang']);
 
 // CHECKOUT
-Route::post('/checkout-post', [App\Http\Controllers\Api\ApiCheckoutController::class, 'postCheckout']);
-Route::post('/upload-bukti-bayar', [App\Http\Controllers\Api\ApiCheckoutController::class, 'uploadBuktiBayar']);
 Route::get('/checkout-list-baru', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutBaru']);
 Route::get('/checkout-list-proses', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutProses']);
 Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutSelesai']);
 Route::get('/checkout-detail', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutDetail']);
 
+Route::post('/checkout-post', [App\Http\Controllers\Api\ApiCheckoutController::class, 'postCheckout']);
+Route::post('/upload-bukti-bayar', [App\Http\Controllers\Api\ApiCheckoutController::class, 'uploadBuktiBayar']);
+
 // AUTHENTICATION
-//TODO - DONE!
+// DONE!
 Route::post('/register', [App\Http\Controllers\Api\ApiUserController::class, 'register']);
 Route::post('/login', [App\Http\Controllers\Api\ApiUserController::class, 'login']);
 Route::get('/logout', [App\Http\Controllers\Api\ApiUserController::class, 'logout']);

@@ -92,13 +92,6 @@ class ApiKeranjangController extends Controller
                 ]);
             }
             
-            //  return response()->json([
-            //         'success' => true,
-            //         'message' => 'Input keranjang berhasil!',
-            //         'data'    => $post
-            //     ], 200);
-            
-            
             if($post) {
                 return response()->json([
                     'success' => true,
