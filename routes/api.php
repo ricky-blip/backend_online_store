@@ -41,10 +41,13 @@ Route::get('/keranjang-list', [App\Http\Controllers\Api\ApiKeranjangController::
 Route::post('/keranjang-delete', [App\Http\Controllers\Api\ApiKeranjangController::class, 'deleteKeranjang']);
 
 // CHECKOUT
-// TODO - checkout-post(send data to cart NEW)
+// TODO - checkout-post(send data to order NEW),
+// TODO - checkout-list-baru(send data to order Payment),
+// TODO - checkout-list-proses(send data to order Payment),
 Route::post('/checkout-post', [App\Http\Controllers\Api\ApiCheckoutController::class, 'postCheckout']);
 
 Route::get('/checkout-list-baru', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutBaru']);
+
 Route::get('/checkout-list-proses', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutProses']);
 Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutSelesai']);
 
