@@ -34,25 +34,25 @@ Route::get('/merk-list', [App\Http\Controllers\Api\ApiProductController::class, 
 Route::get('/product-by-merk', [App\Http\Controllers\Api\ApiProductController::class, 'getProductByMerkId']);
 
 // KERANJANG
-// TODO - Keranjang Post(Inputan Order Now), Keranjang List(Get hasil dari inputan order now),  
+// TODO - Keranjang Post(Send data to CartList with ORDER NOW), 
 Route::post('/keranjang-post', [App\Http\Controllers\Api\ApiKeranjangController::class, 'postKeranjang']);
+// TODO - Keranjang List(collect data from Keranjang-POST),  
 Route::get('/keranjang-list', [App\Http\Controllers\Api\ApiKeranjangController::class, 'getAllKeranjang']);
 //cancel or delete keranjang
 Route::post('/keranjang-delete', [App\Http\Controllers\Api\ApiKeranjangController::class, 'deleteKeranjang']);
 
-// CHECKOUT
-// TODO - checkout-post(send data to order NEW),
-// TODO - checkout-list-baru(send data to order Payment),
-// TODO - checkout-list-proses(send data to order Payment),
+// CHECKOUT DONE,
+// TODO - checkout-post(send data ORDER NOW to checkOUT),
 Route::post('/checkout-post', [App\Http\Controllers\Api\ApiCheckoutController::class, 'postCheckout']);
-
+// TODO - checkout-list-baru(collect data from checkOUT-POST),
 Route::get('/checkout-list-baru', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutBaru']);
-
 Route::get('/checkout-list-proses', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutProses']);
-Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutSelesai']);
-
 Route::get('/checkout-detail', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutDetail']);
+
+// NOTE PAYMENT
+// TODO - upload-payment
 Route::post('/upload-bukti-bayar', [App\Http\Controllers\Api\ApiCheckoutController::class, 'uploadBuktiBayar']);
+Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutSelesai']);
 
 // AUTHENTICATION
 // DONE!
