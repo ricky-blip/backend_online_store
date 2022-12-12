@@ -50,7 +50,7 @@ Route::get('/checkout-list-proses', [App\Http\Controllers\Api\ApiCheckoutControl
 Route::get('/checkout-detail', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutDetail']);
 
 // NOTE PAYMENT
-// TODO - upload-payment
+// TODO - upload-payment(buktibayar), 
 Route::post('/upload-bukti-bayar', [App\Http\Controllers\Api\ApiCheckoutController::class, 'uploadBuktiBayar']);
 Route::get('/checkout-list-selesai', [App\Http\Controllers\Api\ApiCheckoutController::class, 'getCheckoutSelesai']);
 
